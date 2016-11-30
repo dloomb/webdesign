@@ -1,0 +1,20 @@
+<p>HI there! Here's a list of awesome computer scientists. Do you know any others? Add to the list yourself.</p>
+
+<form (submit)="addName()">
+	<input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+	<button type="submit">Add</button>
+</form>
+
+<ul>
+	<li *ngFor="let work of works">
+		<a [routerLink]="['/work', work.id]">
+			<p>{{ work.title }}</p>
+		</a>
+		<small>{{ work.toString() }}</small>
+		<div>
+			<button>Add To Cart</button>
+			<button>Favourite</button>
+			<button>Share</button>
+		</div>
+	</li>
+</ul>
