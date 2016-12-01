@@ -5,4 +5,5 @@ export * from './name-list/index';
 export * from './works-manager/index';
 export * from './navbar/index';
 export * from './toolbar/index';
+export * from './queue/index';
 export * from './config/env.config';

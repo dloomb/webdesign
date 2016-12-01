@@ -1,0 +1,7 @@
+<h1>Admin</h1>
+<button (click)="onFireProductSyncJobClicked()">Fire Product Sync Job</button>
+
+
+<div *ngFor="let task of queue.tasks">
+	<p>{{ task.name() }} : {{ task.status }}</p>
+</div>

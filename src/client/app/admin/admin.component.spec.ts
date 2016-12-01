@@ -14,15 +14,15 @@ import {
 import { MockBackend } from '@angular/http/testing';
 
 import { WorksManagerService } from '../shared/index';
-import { HomeModule } from './home.module';
+import { AdminModule } from './admin.module';
 
 export function main() {
-	describe('Home component', () => {
+	describe('Admin component', () => {
 		// setting module for testing
 		// Disable old forms
 		beforeEach(() => {
 			TestBed.configureTestingModule({
-				imports: [FormsModule, RouterModule, HttpModule, HomeModule,  RouterTestingModule],
+				imports: [FormsModule, RouterModule, HttpModule, AdminModule,  RouterTestingModule],
 				declarations: [TestComponent],
 				providers: [
 					WorksManagerService,
@@ -43,7 +43,7 @@ export function main() {
 				TestBed
 					.compileComponents()
 					.then(() => {
-
+						
 					});
 
 			}));
@@ -52,6 +52,6 @@ export function main() {
 
 @Component({
 	selector: 'test-cmp',
-	template: '<sd-home></sd-home>'
+	template: '<fd-admin></fd-admin>'
 })
 class TestComponent { }
