@@ -91,7 +91,7 @@ export function main() {
 			fail.subscribe((data: any) => {}, (e: any) => {
 				error = e;
 			});
-			expect(error).toEqual('Unexpected end of JSON input');
+			expect(error).toBeDefined();
 		});		
 	});
 }
